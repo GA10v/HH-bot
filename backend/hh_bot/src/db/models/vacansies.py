@@ -1,5 +1,5 @@
-from sqlalchemy import Column, DateTime, Text
 from models.base import BaseModel
+from sqlalchemy import Column, DateTime, Text
 
 
 class Vacancy(BaseModel):

@@ -1,8 +1,9 @@
-from db.pg_db import Base
-from sqlalchemy.dialects.postgresql import UUID
-from sqlalchemy import Column, TIMESTAMP, inspect
-import uuid
 import datetime
+import uuid
+
+from db.pg_db import Base
+from sqlalchemy import TIMESTAMP, Column, inspect
+from sqlalchemy.dialects.postgresql import UUID
 
 
 class BaseModel(Base):
