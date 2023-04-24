@@ -2,7 +2,7 @@
 exclude = .git,__pycache__,.venv,.env,migrations
 max-line-length = 120
 max-complexity = 10
-ignore = E712, VNE001, B008, C901, DUO102, C416, PIE803, VNE003
+ignore = E712, VNE001, B008, C901, DUO102, C416, PIE803, VNE003, E800
 per-file-ignores =
     utils.py: T201
     decorators.py: T201

@@ -42,6 +42,11 @@ class ParserSettings(BaseConfig):
 class TGBotSettings(BaseConfig):
     TOKEN: str = ''
     URL: str = ''
+    # admin commands
+    ADMIN_CONNECT: str = 'admin'
+    ADMIN_DUMP: str = 'dump_hh'
+    ADMIN_UPDATE: str = 'update_db'
+    ADMIN_DISCONNECT: str = 'end'
 
     class Config:
         env_prefix = 'TELEGRAM_'

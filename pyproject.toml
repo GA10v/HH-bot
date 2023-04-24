@@ -13,6 +13,7 @@ sqlalchemy = "1.4.45"
 asyncpg = "^0.27.0"
 psycopg2-binary = "^2.9.5"
 databases = "^0.7.0"
+aiogram = "^2.25.1"
 
 [tool.poetry.dev-dependencies]
 flake8-bugbear = "^22.6.22"
