@@ -1,3 +1,5 @@
+from functools import lru_cache
+
 from core.config import settings
 from db.models import users, vacansies
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
@@ -13,13 +15,14 @@ async_session = sessionmaker(
 )
 
 
-async def init_models():
+async def init_models() -> None:
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.drop_all)
         await conn.run_sync(users.Base.metadata.create_all)
         await conn.run_sync(vacansies.Base.metadata.create_all)
 
 
+@lru_cache()
 async def get_session() -> AsyncSession:
     async with async_session() as session:
         yield session
