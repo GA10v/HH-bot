@@ -59,6 +59,7 @@ class EmailSettings(BaseConfig):
     PASSWORD: str = ''
     SMTP_SERVER: str = 'smtp.yandex.ru'
     SMTP_PORT: int = 587
+    SUBJECT: str = 'HH vacancies'
 
     class Config:
         """Configuration plugin."""
